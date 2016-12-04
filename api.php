@@ -3,8 +3,8 @@
 
 require "src/autoload.php";
 
-$username = "";
-$api_key  = "";
+$username = ""; # Username For Kahyam Commercial
+$api_key  = ""; # Api Key For Kahyam Commercial
 
 $request = new \Kahyam\Request();
 $request->setMethod(Kahyam\Request::PUT)

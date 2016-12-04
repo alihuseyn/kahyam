@@ -6,6 +6,12 @@ With this package the kahyam api usage is simplified.
   - Response after request
 
 ## Usage
+### Installation
+
+```sh
+$ composer require kahyam/api dev-master
+```
+
 ### Method
 ```sh
 PUT    = Kahyam\Request::PUT
