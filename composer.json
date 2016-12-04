@@ -1,5 +1,5 @@
 {
-    "name": "alihuseyn/kahyam",
+    "name": "kahyam/api",
     "description": "Kahyam API for Commercial Usage",
     "type": "library",
     "require": {
