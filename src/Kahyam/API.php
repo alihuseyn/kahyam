@@ -12,7 +12,7 @@ class API{
     private $username   = null;
     private $api_key    = null;
 
-    public function __construct($username,$api_key){
+    public function __construct($username=null,$api_key=null){
         $this->connection = new Connection($username,$api_key);
     }
 
