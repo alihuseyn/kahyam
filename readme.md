@@ -1,5 +1,7 @@
 # Kahyam
 ## Kahyam Commercial API
+[![StyleCI Badge](https://styleci.io/repos/75506910/shield?style=flat-square&branch=master)](https://styleci.io/repos/75506910/) [![Packagist](https://img.shields.io/packagist/v/kahyam/api.svg?style=flat-square)]() [![Packagist](https://img.shields.io/packagist/l/kahyam/api.svg?style=flat-square)]()
+-- --------------------------------
 With this package the kahyam api usage is simplified.
   - Simple Request initialization
   - Procedure for curl
@@ -42,3 +44,4 @@ $response = $api->setRequest($request)->getResponse(); # Get Response
 ### More Info
 
 wwww.kahyam.co
+
