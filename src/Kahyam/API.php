@@ -67,4 +67,5 @@ class API
         $this->response = new Response($output);
 
         return $this;
-    }}
+    }
+ }

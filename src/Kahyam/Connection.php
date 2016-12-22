@@ -96,4 +96,5 @@ class Connection
         }
 
         return $this->curl_output;
-    }}
+    }
+ }
