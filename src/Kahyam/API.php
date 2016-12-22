@@ -2,10 +2,8 @@
 
 namespace Kahyam;
 
-
 class API
 {
-
     private $connection = null;
     private $request = null;
     private $response = null;
@@ -13,7 +11,7 @@ class API
     private $username = null;
     private $api_key = null;
 
-    public function __construct($username=null,$api_key=null)
+    public function __construct($username = null,$api_key = null)
     {
         $this->connection = new Connection($username, $api_key);
     }
@@ -49,6 +47,7 @@ class API
         $this->request = $request;
         $this->connection->setRequest($this->request);
         $this->curl();
+
         return $this;
     }
 
@@ -66,9 +65,7 @@ class API
     {
         $output = $this->connection->connect();
         $this->response = new Response($output);
+
         return $this;
     }
-
-
-
 }
