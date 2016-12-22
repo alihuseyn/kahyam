@@ -4,7 +4,7 @@
 require 'src/autoload.php';
 
 $username = ''; // Username For Kahyam Commercial
-$api_key  = ''; // Api Key For Kahyam Commercial
+$api_key = ''; // Api Key For Kahyam Commercial
 
 $request = new \Kahyam\Request();
 $request->setMethod(Kahyam\Request::PUT)
@@ -17,8 +17,8 @@ $response = $api->setRequest($request)->getResponse();
 
 if (!$response->isError()) {
     print_r($response->output());
-
 } else {
     print_r($response->error());
+
 
 }
