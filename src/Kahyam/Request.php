@@ -19,7 +19,7 @@ class Request
 
     public function __construct()
     {
-        $this->body   = [];
+        $this->body = [];
         $this->params = [];
     }
 
@@ -30,7 +30,7 @@ class Request
         return $this;
     }
 
-    public  function getMethod()
+    public function getMethod()
     {
         return $this->method;
     }

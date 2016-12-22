@@ -21,9 +21,9 @@ class Response
             $this->error = true;
             $this->curl_error = true;
         } else {
-            $this->output = json_decode($this->output,true);
+            $this->output = json_decode($this->output, true);
             if (!$this->output['status']) {
-                $this->error  = true;
+                $this->error = true;
                 $this->output = $this->output['errors'];
             } else {
                 $this->output = $this->output['data'];
@@ -38,7 +38,7 @@ class Response
                 return [
                     'code'       => $this->curl_error_no,
                     'message'    => $this->curl_error_msg,
-                    'curl_error' => true
+                    'curl_error' => true,
                 ];
             } else {
                 return array_map(function ($error) {
