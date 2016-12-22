@@ -48,7 +48,7 @@ class Request
 
     public function setParams($key, $value)
     {
-        $this->params[strtolower($key)] = $value;
+        $this->params[$key] = $value;
 
         return $this;
     }
