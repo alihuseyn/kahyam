@@ -51,7 +51,7 @@ class Request{
     }
 
     public function setBody($key,$value){
-        $this->body[strtolower($key)] = $value;
+        $this->body[$key] = $value;
         return $this;
     }
 
