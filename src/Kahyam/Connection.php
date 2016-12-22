@@ -2,7 +2,6 @@
 
 namespace Kahyam;
 
-
 class Connection
 {
     const url = 'https://kahyam.co/sandbox/api/v1/';
@@ -47,7 +46,6 @@ class Connection
 
         return self::url.$this->request->getEndPoint()."{$required}?username={$this->username}&api_key={$this->api_key}";
     }
-
 
     public function connect()
     {
@@ -99,4 +97,5 @@ class Connection
 
         return $this->curl_output;
     }
+
 }
