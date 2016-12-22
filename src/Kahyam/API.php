@@ -68,4 +68,4 @@ class API
 
         return $this;
     }
- }
+}

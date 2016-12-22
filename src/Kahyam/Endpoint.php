@@ -9,4 +9,4 @@ class Endpoint
     const HOLIDAYS = 'not_work_dates';
     const REPORTS = 'reports';
     const SALES = 'sales';
- }
+}
