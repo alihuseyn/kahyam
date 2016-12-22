@@ -11,4 +11,5 @@ class Endpoint
     const REPORTS = 'reports';
     const SALES = 'sales';
 
+
 }

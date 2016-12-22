@@ -5,7 +5,7 @@ namespace Kahyam;
 
 class Connection
 {
-    const url = "https://kahyam.co/sandbox/api/v1/";
+    const url = 'https://kahyam.co/sandbox/api/v1/';
     private $username = null;
     private $api_key = null;
     private $request = null;
@@ -78,26 +78,25 @@ class Connection
                         'number'  => curl_errno($ch),
                         'message' => curl_error($ch),
                     ],
-                    'data' => null
+                    'data' => null,
                 ];
             } else {
                 $this->curl_output = [
                     'curl_error' => null,
-                    'data'       => $output
+                    'data'       => $output,
                 ];
             }
             curl_close($ch);
-        }else{
+        } else {
             $this->curl_output = [
                                     'curl_error' => [
                                         'number'  => '',
-                                        'message' => 'Curl not available or disabled'
+                                        'message' => 'Curl not available or disabled',
                                     ],
-                                    'data' => null
+                                    'data' => null,
                                 ];
         }
 
         return $this->curl_output;
     }
-
 }
