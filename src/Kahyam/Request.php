@@ -16,7 +16,6 @@ class Request
     protected $params = null;
     protected $body = null;
 
-
     public function __construct()
     {
         $this->body = [];
