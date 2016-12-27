@@ -25,6 +25,6 @@ try {
         print_r($response->error());
     }
 
-} catch(Exception $err) {
+} catch (Exception $err) {
     print_r($err->getMessage());
 }

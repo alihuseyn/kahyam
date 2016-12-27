@@ -141,8 +141,6 @@ class Request
         return is_null($this->params) ? [] : $this->params;
     }
 
-
-
     protected function setBodyKeyValue($key, $value)
     {
         $this->body[$key] = $value;
