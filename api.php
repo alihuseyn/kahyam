@@ -24,7 +24,6 @@ try {
     } else {
         print_r($response->error());
     }
-
 } catch (Exception $err) {
     print_r($err->getMessage());
 }
