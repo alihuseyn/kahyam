@@ -4,7 +4,7 @@ namespace Kahyam;
 
 class Connection
 {
-    const url = 'https://kahyam.co/sandbox/api/v1/';
+    private $url;
     private $username = null;
     private $api_key = null;
     private $request = null;
@@ -25,6 +25,7 @@ class Connection
     public function setRequest(Request $request)
     {
         $this->request = $request;
+        $this->url = $request->getUrl();
     }
 
     protected function initialize()
@@ -42,9 +43,12 @@ class Connection
         $required = '';
         if (!is_null($this->request->getID()) && !empty($this->request->getID())) {
             $required = "/{$this->request->getID()}";
+            if ($this->request->isFirmCode()) {
+                $required .= "/out";
+            }
         }
 
-        return self::url.$this->request->getEndPoint()."{$required}?username={$this->username}&api_key={$this->api_key}";
+        return $this->url.$this->request->getEndPoint()."{$required}?username={$this->username}&api_key={$this->api_key}";
     }
 
     public function connect()
@@ -69,7 +73,6 @@ class Connection
                 curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($this->curl_body));
             }
             $output = curl_exec($ch);
-
             if (curl_errno($ch)) {
                 $this->curl_output = [
                     'curl_error' => [
