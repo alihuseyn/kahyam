@@ -25,9 +25,9 @@ class Request
         $this->params = [];
     }
 
-    public function setUrl($url='https://kahyam.co/sandbox/api/v1/')
+    public function setUrl($url = 'https://kahyam.co/sandbox/api/v1/')
     {
-        if (!is_null($url) && !empty($url) ) {
+        if (!is_null($url) && !empty($url)) {
             if ($this->contains($url, 'https://kahyam.co/') && $this->contains($url, 'api/v1/', 'END')) {
                 $this->url = $url;
 
@@ -57,9 +57,9 @@ class Request
         }
 
         if ($case == 'START') {
-            return (substr($haystack, 0, $length) === $needle);
+            return substr($haystack, 0, $length) === $needle;
         } elseif ($case == 'END') {
-            return (substr($haystack, -$length) === $needle);
+            return substr($haystack, -$length) === $needle;
         }
 
         return false;
@@ -96,7 +96,7 @@ class Request
 
     public function __call($name, $arguments)
     {
-        if ($name == 'setBody'){
+        if ($name == 'setBody') {
             if (is_array($arguments[0])) {
                 $this->setBodyArray($arguments[0]);
             } else {
@@ -106,7 +106,7 @@ class Request
             }
 
             return $this;
-        } elseif ($name == 'setParams'){
+        } elseif ($name == 'setParams') {
             if (is_array($arguments[0])) {
                 $this->setParamsArray($arguments[0]);
             } else {
@@ -148,7 +148,8 @@ class Request
         $this->body[$key] = $value;
     }
 
-    protected function setBodyArray(array $content){
+    protected function setBodyArray(array $content)
+    {
         $this->body = $content;
     }
 

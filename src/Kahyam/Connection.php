@@ -44,7 +44,7 @@ class Connection
         if (!is_null($this->request->getID()) && !empty($this->request->getID())) {
             $required = "/{$this->request->getID()}";
             if ($this->request->isFirmCode()) {
-                $required .= "/out";
+                $required .= '/out';
             }
         }
 

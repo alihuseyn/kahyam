@@ -12,7 +12,7 @@ try {
         ->setEndPoint(Kahyam\Endpoint::REPORTS)
         ->setParams([
             'interval' => '20161227;20161227',
-            'limit' => 1,
+            'limit'    => 1,
         ])
         ->setUrl();
 
@@ -25,6 +25,6 @@ try {
         print_r($response->error());
     }
 
-}catch(Exception $err){
+} catch(Exception $err) {
     print_r($err->getMessage());
 }
