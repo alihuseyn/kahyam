@@ -28,6 +28,7 @@ api/v1/hours = Kahyam\Endpoint::HOURS
 api/v1/not_work_dates = Kahyam\Endpoint::HOLIDAYS
 api/v1/reports = Kahyam\Endpoint::REPORTS
 api/v1/places = Kahyam\Endpoint::PLACES
+api/v1/confirmation = Kahyam\Endpoint::CONFIRM
 ```
 ### Code
 ```sh
@@ -43,5 +44,5 @@ $response = $api->setRequest($request)->getResponse(); # Get Response
 ``` 
 ### More Info
 
-wwww.kahyam.co
+www.kahyam.co
 
