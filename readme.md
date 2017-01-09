@@ -11,7 +11,7 @@ With this package the kahyam api usage is simplified.
 ### Installation
 
 ```sh
-$ composer require kahyam/api dev-master
+$ composer require kahyam/api
 ```
 
 ### Method
